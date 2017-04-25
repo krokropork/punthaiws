@@ -22,13 +22,13 @@ public class VGl001PunInterfaceCostApiRestController {
 
     @GetMapping(value = AppConstant.GL001.FindAll)
     public ResponseEntity  findAll(){
-        return new ResponseEntity(new ResponseData(AppEnum.OK.code(),AppEnum.OK.des(),vGl001PunInterfaceCostService.findAll()), HttpStatus.OK);
+        return new ResponseEntity(new ResponseData( HttpStatus.OK,AppEnum.OK.des(),vGl001PunInterfaceCostService.findAll()), HttpStatus.OK);
     }
 
 
     @GetMapping(value = AppConstant.GL001.findAllBy +"/{artnr}")
     public ResponseEntity  findByArtnr(@PathVariable String artnr){
-        return new ResponseEntity(new ResponseData(AppEnum.OK.code(),AppEnum.OK.des(),vGl001PunInterfaceCostService.findAllByArtnr(artnr)), HttpStatus.OK);
+        return new ResponseEntity(new ResponseData(HttpStatus.OK,AppEnum.OK.des(),vGl001PunInterfaceCostService.findAllByArtnr(artnr)), HttpStatus.OK);
     }
 
 }
